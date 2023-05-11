@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 import Card, { CardVariant } from "./components/Card";
-import UserList from "./components/UserList";
+// import UserList from "./components/UserList";
 import { ITodo, IUser } from "./types/types";
 import axios from "axios";
 import List from "./components/List";
 import UserItem from "./components/UserItem";
 import TodoItem from "./components/TodoItem";
+import EventsExample from "./components/EventsExample";
 
 function App() {
   const [users, setUsers] = useState<IUser[]>([]);
@@ -40,6 +41,7 @@ function App() {
 
   return (
     <div>
+      <EventsExample />
       <Card
         onClick={(num) => console.log("Click", num)}
         width="100px"
